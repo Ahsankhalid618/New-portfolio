@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>My Portfolio</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+   <script src="https://cdn.tailwindcss.com"></script>
+   <script src="https://kit.fontawesome.com/a24d51968d.js" crossorigin="anonymous"></script>
+   <style>
+      @media (min-width:768px) {
+         * {
+            scroll-behavior: smooth;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+         }
+      }
+
+      nav {
+         z-index: 1;
+      }
+
+      @media(min-width:768px) {
+         main>div>p {
+            line-height: 3.25rem;
+            font-size: 1.875rem;
+         }
+
+         section>div>p {
+            line-height: 3.25rem;
+            font-size: 1.75rem;
+         }
+
+         #prjct {
+            line-height: 3.2rem;
+            font-size: 1.75rem;
+         }
+      }
+
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+      footer {
+         width: 100%;
+         position: fixed;
+         bottom: 0;
+         left: 0;
+         background: rgb(2, 14, 29);
+      }
+
+      footer .content {
+         max-width: 1350px;
+         margin: auto;
+         padding: 20px;
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+         color: #fff;
+      }
+
+      footer .content p,
+      a {
+         color: #fff;
+      }
+
+      footer .content .box {
+         width: 33%;
+         transition: all 0.4s ease;
+      }
+
+      footer .content .topic {
+         font-size: 22px;
+         font-weight: 600;
+         color: #fff;
+         margin-bottom: 16px;
+
+      }
+
+      footer .content p {
+         text-align: justify;
+      }
+
+      footer .content .lower .topic {
+         margin: 24px 0 5px 0;
+      }
+
+      footer .content .lower i {
+         padding-right: 16px;
+      }
+
+      footer .content .middle {
+         padding-left: 80px;
+      }
+
+      footer .content .middle a {
+         line-height: 32px;
+      }
+
+      footer .content .right input[type="text"] {
+         height: 45px;
+         width: 100%;
+         outline: none;
+         color: #d9d9d9;
+         background: #000;
+         border-radius: 5px;
+         padding-left: 10px;
+         font-size: 17px;
+         border: 2px solid #222222;
+      }
+
+      footer .content .right input[type="submit"] {
+         height: 42px;
+         width: 100%;
+         font-size: 18px;
+         color: #d9d9d9;
+         background: #eb2f06;
+         outline: none;
+         border-radius: 5px;
+         letter-spacing: 1px;
+         cursor: pointer;
+         margin-top: 12px;
+         border: 2px solid #eb2f06;
+         transition: all 0.3s ease-in-out;
+      }
+
+      .content .right input[type="submit"]:hover {
+         background: none;
+         color: #eb2f06;
+      }
+
+      footer .content .media-icons a {
+         font-size: 16px;
+         height: 45px;
+         width: 45px;
+         display: inline-block;
+         text-align: center;
+         line-height: 43px;
+         border-radius: 5px;
+         border: 2px solid #222222;
+         margin: 30px 5px 0 0;
+         transition: all 0.3s ease;
+      }
+
+      .content .media-icons a:hover {
+         border-color: #eb2f06;
+      }
+
+      footer .bottom {
+         width: 100%;
+         text-align: right;
+         color: #d9d9d9;
+         padding: 0 40px 5px 0;
+      }
+
+      footer .bottom a {
+         color: #eb2f06;
+      }
+
+      footer a {
+         transition: all 0.3s ease;
+      }
+
+      footer a:hover {
+         color: #eb2f06;
+      }
+
+      @media (max-width:1100px) {
+         footer .content .middle {
+            padding-left: 50px;
+         }
+      }
+
+      @media (max-width:950px) {
+         footer .content .box {
+            width: 50%;
+         }
+
+         .content .right {
+            margin-top: 40px;
+         }
+      }
+
+      @media (max-width:560px) {
+         footer {
+            position: relative;
+         }
+
+         footer .content .box {
+            width: 100%;
+            margin-top: 30px;
+         }
+
+         footer .content .middle {
+            padding-left: 0;
+         }
+      }
+   </style>
+</head>
+
+<body class="p-0 m-0">
+   <nav
+      class="md:sticky md:overflow-hidden md:top-0 md:flex bg-slate-900 md:bg-slate-900 lg:border-l-indigo-700 text-white  md:h-14  font-serif  h-auto w-auto  ">
+      <a href="#"><img src="logo.png" class=" h-14 w-14 ml-3 cursor-pointer " alt="logo"></a>
+      <ul
+         class="md:flex md:flex-auto md:justify-end  md:space-x-20 px-36 md:px-5 md:space-y-0 space-y-4 items-center justify-center md:py-4 ">
+         <li
+            class="cursor-pointer font-medium font-sans hover:text-white hover:bg-orange-600 rounded-sm hover:box-border w-20 text-center h-8 ">
+            <a href="#">Home</a></li>
+         <li
+            class="cursor-pointer font-medium font-sans hover:text-white hover:bg-orange-600 rounded-sm hover:box-border w-20 text-center h-8 ">
+            <a href="#about">About</a></li>
+         <li
+            class="cursor-pointer font-medium font-sans hover:text-white hover:bg-orange-600 rounded-sm hover:box-border w-20 text-center h-8 ">
+            <a href="#Projects"> Projetcs</a>
+         </li>
+         <li
+            class="cursor-pointer font-medium font-sans hover:text-white hover:bg-orange-600 rounded-sm hover:box-border w-20 text-center h-8 ">
+            <a href="#contact">Conatact</a>
+         </li>
+         <li>
+            <div class="relative mx-auto text-black lg:block hidden">
+               <input class="border-2 border-gray-300 bg-white h-8 pl-2 pr-8 rounded-lg text-sm focus:outline-none"
+                  type="search" name="search" placeholder="Search">
+               <button type="submit" class="absolute right-0 top-0 mt-3 mr-2">
+                  <svg class="text-gray-600 h-3.5 w-6 fill-current" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                     id="Capa_1" x="0px" y="0px" viewbox="0 0 56.966 56.966"
+                     style="enable-background:new 0 0 56.966 56.966;" xml:space="preserve" width="512px" height="512px">
+                     <path
+                        d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z" />
+                  </svg>
+               </button>
+            </div>
+         </li>
+      </ul>
+   </nav>
+   <!--<img class="bg-fixed bg-blend-darken brightness-75" src="code.jpg" alt="interview">-->
+   <main id="home" class="h-full">
+      <video autoplay loop muted class="w-full content-center ">
+         <source class="" src="code-runner-1.mp4" type="video/mp4" />
+         Your browser does not support the video tag.
+      </video>
+      <div
+         class=" backdrop-blur-xl overflow-auto  absolute text-white rounded-2xl whitespace-normal md:pt-5 md:pb-5 md:pl-5 md:pr-5 md:ml-56 md:mr-56 ml-9 mt-8 pr-5 pl-5  md:top-32 top-64 md:h-2/3 h-32 md:w-auto w-4/5 content-center ">
+         <br>
+         <h1 class="font-sans md:text-4xl text-center subpixel-antialiased font-medium ">Hi, I'm Ahsan Khalid</h1>
+         <br>
+         <h1 class="font-sans md:text-4xl text-center">"I'm a Frontend developer"</h1>
+         <br>
+         <br>
+         <p class="font-sans  text-justify "> I'm 21 years old, studying as Software Engineer in my junior
+            year (2020-2024). <br>
+            Currently doing my gradutaion from <a href="https://szabist-isb.edu.pk/" class="text-orange-500"
+               target="_blank">SZABIST ISLAMABAD.</a>
+            <br>
+            Developing skills in web development <i class="fa-solid fa-laptop-code"></i>.
+            <br>
+            Also working on Andriod development <i class="fa-brands fa-android"></i>.
+         </p>
+      </div>
+   </main>
+   <section id="about" class="w-full relative ">
+
+      <img src="blue1.jpg" class="brightness-75" alt="new">
+      <div
+         class=" backdrop-blur-xl overflow-auto absolute text-white rounded-2xl whitespace-normal md:pt-5 md:pb-5 pb-3 md:pl-14 pl-5 pr-5 pt-5 md:pr-14 md:ml-56 md:mr-56 ml-9 mb-8 md:mt-4 md:top-20 top-7 md:h-3/4 h-32 md:w-auto w-4/5 content-center  ">
+         <br>
+         <h1 class="font-sans text-4xl text-center subpixel-antialiased font-medium ">About </h1>
+         <br>
+
+
+         <p class="font-sans  text-justify ">
+            <b>Skills :</b> <br><br>
+            HTML5 <i class="fa-brands fa-html5"></i>, CSS3 <i class="fa-brands fa-css3-alt"></i>, javascript <i
+               class="fa-brands fa-js"></i>, Bootstrap <i class="fa-brands fa-bootstrap"></i>, TailwindCSS . (Design
+            included)<br>
+            Also familiar with Version control system like Git <i class="fa-brands fa-git-alt"></i><br>
+            Completed 10 plus projects with javscript on Github <i class="fa-brands fa-github"></i><br>
+            Can build both, Custom website and Wordpress <i class="fa-brands fa-wordpress"></i><br>
+            Currently working with React.js <i class="fa-brands fa-react"></i> on diffrent projects.
+
+         </p>
+      </div>
+   </section>
+   <section id="Projects" class="w-full relative ">
+
+      <img src="dots.jpg" alt="new">
+      <div
+         class=" backdrop-blur-xl overflow-auto absolute text-white rounded-2xl whitespace-normal md:pt-5 md:pb-4 md:pl-10 pl-5 pr-5 md:ml-56 md:mr-56 ml-9  md:top-20 top-7 md:h-auto h-40 md:w-auto w-4/5 content-center ">
+         <br>
+         <h1 class="font-sans text-4xl text-center subpixel-antialiased font-medium ">Projects</h1>
+         <br>
+         <h1 class="font-sans md:text-4xl  text-center">"Fully Customized projects</h1>
+
+         <p class="font-sans text-xl text-justify">
+            <br>
+            <ul id="prjct" class="pt-5 pb-8 pl-5 pr-5 list-disc md:mr-56 font-sans  md:text-justify">
+               <li>Weather App project (API based). <i class="fa-solid fa-cloud-sun-rain"></i> </li>
+               <li>Digital Clock project. <i class="fa-solid fa-clock"></i> </li>
+               <li>E-commerce Project. <i class="fa-solid fa-cart-shopping"></i> </li>
+               <li>Calculator Project with Fully UI designed. <i class="fa-solid fa-calculator"></i></li>
+               All projects Available on my <a href="https://github.com/Ahsankhalid618" class="text-amber-400 underline"
+                  target="_blank">github</a> <i class="fa-brands fa-github"></i>.<br>
+               <span class="text-yellow-500"><i>* Source code of Every project is available in github repositories with
+                     images & files included.</i></span>
+            </ul>
+
+         </p>
+      </div>
+   </section>
+
+
+   <footer class="relative" id="contact">
+      <div class="content">
+         <div class="left box">
+            <div class="upper">
+               <div class="topic">About us</div>
+               <p>Every destiny has a beautiful story and every story has a different ending.</p>
+            </div>
+            <div class="lower">
+               <div class="topic">Contact Us</div>
+               <br>
+               <div class="phone">
+                  <a href="#contact"><i class="fas fa-phone-volume"></i>+92 346 2858 105</a>
+               </div>
+               <div class="email">
+                  <a href="#contact"><i class="fas fa-envelope"></i>ahsankhalid816@gmail.com</a>
+               </div>
+            </div>
+         </div>
+         <div class="middle box">
+            <div class="topic">My Services</div>
+            <div><a href="#contact">Web Design, Development</a></div>
+            <div><a href="#contact">Web UX Design, Reasearch</a></div>
+            <div><a href="#contact">Web User Interface Design</a></div>
+            <div><a href="#contact">Theme Development, Design</a></div>
+            <div><a href="#contact">Mobile Application Design</a></div>
+            <div><a href="#contact">Wire raming & Prototyping</a></div>
+         </div>
+         <div class="right box">
+            <div class="topic">Subscribe here</div>
+            <form action="#">
+               <input type="text" placeholder="Enter email address">
+               <input type="submit" name="" value="Send">
+               <div class="media-icons">
+                  <a href="https://www.facebook.com/ahsan.khalid.1804109" target="_blank"><i
+                        class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="https://twitter.com/Ahsankh70062389" target="_blank"><i class="fab fa-twitter"></i></a>
+                  <a href="#contact"><i class="fab fa-youtube"></i></a>
+                  <a href="https://www.linkedin.com/in/ahsan-khalid-8b2bb616a/" target="_blank"><i
+                        class="fab fa-linkedin-in"></i></a>
+               </div>
+            </form>
+         </div>
+      </div>
+      <div class="bottom">
+         <p>Copyright © 2022 <a href="#contactcontact">Ahsan khalid</a> All rights reserved</p>
+      </div>
+   </footer>
+<script>
+   
+</script>
+</body>
+
+</html>
